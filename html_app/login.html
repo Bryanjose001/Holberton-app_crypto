@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Wallet - Home</title>
-    <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Crypto Wallet - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="login-body">
     <!-- HEADER -->
     <header class="header">
         <div class="logo-container">
@@ -15,32 +15,41 @@
             <h1 class="app-name">Crypto Wallet</h1>
         </div>
         <nav class="nav">
-            <a href="home.html" class="nav-link active">Home</a>
+            <a href="home.html" class="nav-link">Home</a>
             <a href="wallet.html" class="nav-link">Wallet</a>
             <a href="settings.html" class="nav-link">Settings</a>
-            <a href="login.html" class="nav-btn">Logout</a>
+            <a href="login.html" class="nav-btn">Login</a>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h2>Bitcoin surpasses 123,000 <span id="username">User</span> 👋</h2>
-        <p>Your portfolio is growing fast! 🚀</p>
-    </section>
+    <!-- LOGIN SECTION -->
+    <main class="main login-section">
+        <div class="login-card">
+            <h2 class="login-title">Welcome Back</h2>
+            <p class="login-subtitle">Securely access your Crypto Wallet</p>
+            <form>
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
 
-    <!-- MAIN DASHBOARD -->
-    <main class="main">
-        <h3>My Wallet</h3>
-        <section id="assets" class="cards-container">
-            <!-- Cards will be injected by JS -->
-        </section>
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="btn login-btn">Login</button>
+            </form>
+            <p class="register-text">Don’t have an account? <a href="register.html">Sign Up</a></p>
+        </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
         <p>&copy; 2025 Crypto Wallet. All rights reserved.</p>
     </footer>
-
-    <script src="home.js"></script>
 </body>
 </html>
+<script src="scripts.js"></script>
+<script>
+    // JavaScript for handling login form submission
+    document.querySelector('.login-card form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        const password = this.querySelector('input[type="password"]').value;    
