@@ -68,3 +68,30 @@ function getCookie(name) {
   return match ? match[2] : null;
 }
 
+// Simulated user data
+const user = {
+    name: "Satoshi Nakamoto",
+    assets: [
+        { name: "Bitcoin (BTC)", balance: 0.523 },
+        { name: "Ethereum (ETH)", balance: 2.145 },
+        { name: "Cardano (ADA)", balance: 1500 },
+        { name: "Solana (SOL)", balance: 75 }
+    ]
+};
+
+// Display username
+document.getElementById("username").textContent = user.name;
+
+// Render assets
+const assetsContainer = document.getElementById("assets");
+
+user.assets.forEach(asset => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+        <h4>${asset.name}</h4>
+        <p>Balance: ${asset.balance}</p>
+        <button class="btn">View Details</button>
+    `;
+    assetsContainer.appendChild(card);
+});

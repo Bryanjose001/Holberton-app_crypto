@@ -5,25 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Wallet</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="App Logo" class="logo" />
-        <nav>
-            <a href="login.html" id="login-link">Login</a>
-            <a href="index.html">Home</a>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="App Logo" class="logo">
+            <h1 class="app-name">Crypto Wallet</h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="login.html" id="login-link" class="nav-btn">Login</a>
         </nav>
     </header>
-    <main>
-        <section id="places-list">
-        
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <section id="places-list" class="cards-container">
+            <!-- Example Card -->
+            <div class="card">
+                <h2>Bitcoin (BTC)</h2>
+                <p>Balance: 0.523 BTC</p>
+                <button class="btn">View Details</button>
+            </div>
+            <div class="card">
+                <h2>Ethereum (ETH)</h2>
+                <p>Balance: 2.145 ETH</p>
+                <button class="btn">View Details</button>
+            </div>
         </section>
-        
     </main>
-    <!-- Footer -->
-<footer>
-    <p>&copy; 2025 All rights reserved.</p>
-</footer>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Crypto Wallet. All rights reserved.</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
