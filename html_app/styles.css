@@ -369,3 +369,9 @@ input:focus {
     width: 100%;
     margin-top: 0.8rem;
 }
+.card canvas {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100% !important;
+    height: 50px !important;
+}
