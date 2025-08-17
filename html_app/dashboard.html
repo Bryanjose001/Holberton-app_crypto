@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="App Logo" class="logo">
+            <h1 class="app-name">Crypto Wallet</h1>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html" class="nav-link active">Home</a>
+            <a href="wallet.html" class="nav-link">Wallet</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+            <a href="login.html" class="nav-btn">Logout</a>
+        </nav>
+    </header>
+
+    <!-- HERO / Portfolio -->
+    <section class="hero">
+        <h2>Portfolio Value</h2>
+        <p class="portfolio-value">$12,345.67</p>
+        <p class="portfolio-change">▲ +4.5% Today</p>
+    </section>
+
+    <!-- CRYPTO CARDS -->
+    <main class="main">
+        <h3>My Assets</h3>
+        <section class="cards-container" id="crypto-cards">
+            <!-- Cards injected by JS -->
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Crypto Wallet. All rights reserved.</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

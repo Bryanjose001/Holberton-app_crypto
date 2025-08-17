@@ -318,3 +318,54 @@ input:focus {
 .register-text a:hover {
     text-decoration: underline;
 }
+/* ===== DASHBOARD SPECIFIC ===== */
+.dashboard-body {
+    background: linear-gradient(-45deg, #0e0e0e, #1a1a1a, #141414, #0d0d0d);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+.portfolio-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #ffb100;
+    margin-top: 0.5rem;
+}
+
+.portfolio-change {
+    color: #0f0; /* green for positive */
+    margin-top: 0.3rem;
+    font-weight: 600;
+}
+
+/* Crypto Cards */
+.card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 177, 0, 0.25);
+}
+
+.card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffb100;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.card .btn {
+    width: 100%;
+    margin-top: 0.8rem;
+}
