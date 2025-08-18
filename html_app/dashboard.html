@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Wallet - Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Wallet - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- QRCode.js -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body class="dashboard-body">
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="App Logo" class="logo">
-            <h1 class="app-name">Crypto Wallet</h1>
-        </div>
-        <nav class="nav">
-            <a href="dashboard.html" class="nav-link active">Home</a>
-            <a href="wallet.html" class="nav-link">Wallet</a>
-            <a href="settings.html" class="nav-link">Settings</a>
-            <a href="login.html" class="nav-btn">Logout</a>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="App Logo" class="logo">
+      <h1 class="app-name">Crypto Wallet</h1>
+    </div>
+    <nav class="nav">
+      <a href="dashboard.html" class="nav-link active">Home</a>
+      <a href="wallet.html" class="nav-link">Wallet</a>
+      <a href="settings.html" class="nav-link">Settings</a>
+      <a href="login.html" class="nav-btn">Logout</a>
+    </nav>
+  </header>
 
-    <!-- HERO / Portfolio -->
-    <section class="hero">
-        <h2>Portfolio Value</h2>
-        <p class="portfolio-value">$12,345.67</p>
-        <p class="portfolio-change">▲ +4.5% Today</p>
-    </section>
+  <!-- HERO / Portfolio -->
+  <section class="hero">
+    <h2>Portfolio Value</h2>
+    <p class="portfolio-value" id="portfolio-value">$0</p>
+    <p class="portfolio-change">▲ +0% Today</p>
+  </section>
 
-    <!-- CRYPTO CARDS -->
-    <main class="main">
-        <h3>My Assets</h3>
-        <section class="cards-container" id="crypto-cards">
-            <!-- Cards injected by JS -->
-        </section>
-    </main>
+  <!-- CRYPTO CARDS -->
+  <main class="main">
+    <h3>My Assets</h3>
+    <section id="crypto-cards" class="cards-container"></section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2025 Crypto Wallet. All rights reserved.</p>
-    </footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Crypto Wallet. All rights reserved.</p>
+  </footer>
 
-    <script src="dashboard.js"></script>
+  <!-- Send Modal -->
+  <div id="sendModal" class="modal">
+    <div class="modal-content">
+      <h3>Send Crypto</h3>
+      <label>To Address</label>
+      <input type="text" id="sendAddress" placeholder="Wallet address">
+      <label>Amount</label>
+      <input type="number" id="sendAmount" placeholder="Enter amount">
+      <button class="btn" id="sendConfirmBtn">Send</button>
+      <button class="btn cancel-btn" onclick="closeModal('sendModal')">Cancel</button>
+      <p id="sendMessage" style="margin-top:10px;color:#ffb100;"></p>
+    </div>
+  </div>
+
+  <!-- Receive Modal -->
+  <div id="receiveModal" class="modal">
+    <div class="modal-content">
+      <h3>Receive Crypto</h3>
+      <p class="wallet-address"></p>
+      <div id="qrCode"></div>
+      <button class="btn cancel-btn" onclick="closeModal('receiveModal')">Close</button>
+    </div>
+  </div>
+
+  <!-- Dashboard JS -->
+  <script src="dashboard.js"></script>
 
 </body>
 </html>

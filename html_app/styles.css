@@ -375,3 +375,67 @@ input:focus {
     width: 100% !important;
     height: 50px !important;
 }
+/* -------- MODALS -------- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.modal-content h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffb100;
+  margin-bottom: 1rem;
+}
+
+.modal-content label {
+  display: block;
+  color: #ccc;
+  margin-top: 1rem;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  background: #121212;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.cancel-btn {
+  margin-top: 1rem;
+  background: #333;
+  color: #fff;
+}
+.coin-stats {
+  margin: 10px 0;
+  padding: 0.5rem 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+.coin-stats p {
+  margin: 4px 0;
+}
