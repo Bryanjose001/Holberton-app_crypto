@@ -13,7 +13,7 @@ def create_app(config_class="config.DevelopmentConfig"):
     CORS(app, supports_credentials=True, origins="*", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
     bcrypt = Bcrypt()
     app.config.from_object(config_class)
-    api = Api(app, version='1.0', title='HBnB API', description='HBnB Application API')
+    api = Api(app, version='1.0', title='Crypto Wallet', description='Crypto wallet API')
     jwt = JWTManager()
     jwt.init_app(app)
     bcrypt.init_app(app)
